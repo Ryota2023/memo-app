@@ -1,4 +1,4 @@
-# memo-app (LocalStorageへの登録と表示)
+# memo-app (LocalStorage)
 ●期限：2023/06/03 ●提出日：2023/7/17
 提出課題４　メモ帳アプリ
 ## DEMO
