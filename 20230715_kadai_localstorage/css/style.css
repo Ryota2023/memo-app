@@ -1,0 +1,31 @@
+header{
+    height: 100px;
+    background-color: greenyellow;
+}
+
+.head1 {
+    font-size: 24px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.today {
+    position: absolute;
+    /* top: 15px; */
+    right: 20px;
+  }
+
+.hitokoto{
+    padding-left: 0px;
+}
+
+/* #val1{
+    font-size: 20px;
+} */
+
+/* #val2_1 {
+    font-size: 18px;
+} */
+#val2_2 {
+    font-size: 28px;
+}

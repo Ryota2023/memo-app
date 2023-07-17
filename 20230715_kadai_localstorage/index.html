@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>myMemoPad</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/jquery-2.1.3.min.js"></script>
+<script src="./js/today.js" defer></script>
+</head>
+
+<header>
+<div class="head1">暗記カードを作成して、どんどん覚えよう！</div>
+</header>
+
+<main>
+<!-- 今日の日付を表示する -->
+<div class="today"></div><br>
+
+<div id="val1"></div>
+<div id="val2_1"></div><br>
+<div id="val2_2"></div><br>
+
+<form action="name_regis.html">
+初めての利用はこちら→
+<input type="submit"value="送信" ><br>
+</form>
+<div class="main1">暗記カードを作る</div>
+
+<label>暗記カードのタイトル：<input type="text" ></label><br>
+<label>覚える数：<input type="number"></label>
+<input type="submit"value="送信" ><br>
+
+<script>
+// 画面を立ち上げた時に、すでに名前が登録されているか最初に確認する
+const display = document.querySelector("#display");
+// LocalStorageからデータを取得
+const data = localStorage.getItem("name_registry");
+console.log(data);
+
+if (data) {
+  const [val1, val2] = data.split(",");
+  console.log(val1);
+  console.log(val2);
+
+    if(!val1){
+        console.log("nameないよ");
+        $("#val1").html("こんにちは、初見さん！お名前登録してね！");
+    } else{
+        const val1Div = document.querySelector("#val1");
+        val1Div.innerHTML = `こんにちは、${val1}さん、`;
+        const val2_1Div = document.querySelector("#val2_1");
+        val2_1Div.innerHTML = `${val1}さんが以前言った意気込みがこれです！`;
+        const val2_2Div = document.querySelector("#val2_2");
+        val2_2Div.innerHTML = val2;
+    }
+}
+</script>
+
+</main>
+</html>
